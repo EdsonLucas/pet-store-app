@@ -9,7 +9,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html, body, #root {
+  html, body, #react-root {
     min-height: 100%;
   }
 
@@ -22,10 +22,34 @@ export default createGlobalStyle`
   body, input, button {
     color: #222;
     font-size: 14px;
+    font-weight: 700;
   }
 
   button {
     cursor: pointer;
+    outline: none
+  }
+
+  h1 {
+    font-size: 40px
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 17px
+  }
+
+  a:focus,
+  button:focus,
+  a:active,
+  button:active,
+  a:visited,
+  button:visited {
+    outline: none;
+    border: none;
   }
 
 `;

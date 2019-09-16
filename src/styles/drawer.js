@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-  padding: 24px;
   height: 100%;
-  background: white;
+  background: #ffb901;
   box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
@@ -17,6 +16,37 @@ export const Nav = styled.nav`
   &.open {
     transform: translateX(0);
   }
+`;
+
+export const UserContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+
+  img {
+    width: 69px;
+    height: 69px;
+  }
+`;
+
+export const RightContainer = styled.div`
+  width: 90%;
+
+  h3,
+  span {
+    color: #ffffff;
+  }
+`;
+
+export const Content = styled.div`
+  height: 100%;
+  background: #ffffff;
+  padding: 20px 40px;
+  margin-top: -10px;
+  border-top-left-radius: 20% 45px;
+  border-top-right-radius: 20% 45px;
 
   ul {
     list-style: none;
@@ -26,18 +56,19 @@ export const Nav = styled.nav`
   }
 
   li {
-    margin: 0.5rem 0;
+    margin: 0.9rem 0;
   }
 
   a {
-    color: #521751;
+    font-size: 18px;
+    font-weight: 700;
+    color: #707070;
     text-decoration: none;
     font-size: 1.2rem;
   }
 
-  a:hover,
-  a:active {
-    color: #fa923f;
+  hr {
+    margin: 1rem 0;
   }
 `;
 
