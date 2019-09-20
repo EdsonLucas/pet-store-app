@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { TouchableOpacity } from 'react-native-web';
 
 export const Nav = styled.nav`
   height: 100%;
@@ -36,6 +37,15 @@ export const RightContainer = styled.div`
 
   h3,
   span {
+    color: #ffffff;
+  }
+`;
+
+export const LoginButton = styled(TouchableOpacity)`
+  padding: 10px;
+  border-radius: 20px;
+
+  h3 {
     color: #ffffff;
   }
 `;

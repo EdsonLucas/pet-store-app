@@ -5,10 +5,15 @@ import {
   Nav,
   UserContainer,
   RightContainer,
+  LoginButton,
   Content,
 } from '../styles/drawer';
 
 import defaultprofile from '../images/default-profile.svg';
+
+const state = {
+  isLogged: false,
+};
 
 const SideDrawer = props => {
   const { DrawerOpen, backdropClickHandler } = props;
@@ -17,11 +22,19 @@ const SideDrawer = props => {
     <>
       <Nav className={DrawerOpen && 'open'}>
         <UserContainer>
-          <img src={defaultprofile} alt="Ana Júlia" />
-          <RightContainer>
-            <h3>Ana Júlia</h3>
-            <span>ana.julia@gmail.com</span>
-          </RightContainer>
+          {state.isLogged ? (
+            <>
+              <img src={defaultprofile} alt="Ana Júlia" />
+              <RightContainer>
+                <h3>Ana Júlia</h3>
+                <span>ana.julia@gmail.com</span>
+              </RightContainer>
+            </>
+          ) : (
+            <LoginButton>
+              <h3>Entre ou Cadastre-se</h3>
+            </LoginButton>
+          )}
         </UserContainer>
         <Content>
           <ul>
@@ -46,9 +59,6 @@ const SideDrawer = props => {
 
             <hr />
 
-            <li>
-              <a href="/">Meus Perfil</a>
-            </li>
             <li>
               <a href="/">Sobre a Pet Store</a>
             </li>
