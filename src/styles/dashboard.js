@@ -2,9 +2,6 @@ import styled from 'styled-components';
 
 import { Image, TouchableOpacity } from 'react-native-web';
 
-import selectDog from '../images/select-dog.svg';
-import arrowDown from '../images/arrow-down.svg';
-
 export const Container = styled.div`
   background: #ffb901;
 `;
@@ -88,29 +85,15 @@ export const Content = styled.div`
     font-weight: 700;
     margin-bottom: 10px;
   }
-
-  select {
-    width: 100%;
-    background: #f2f3f5;
-    padding: 20px;
-    border: none;
-    font-size: 17px;
-    color: #707070;
-    font-weight: 700;
-    margin-bottom: 20px;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    background-image: url(${arrowDown});
-    background-repeat: no-repeat;
-    background-size: 16px 17px;
-    background-position: center right 10px;
-  }
 `;
 
-export const SelectDog = styled.img`
+export const SelectDog = styled(Image)`
   width: 30px;
+  height: 38px;
+`;
+
+export const SelectCat = styled(Image)`
+  width: 35px;
   height: 38px;
 `;
 

@@ -12,6 +12,7 @@ import {
   Cat,
   Content,
   SelectDog,
+  SelectCat,
   CardProduct,
   ProductImage,
   RightContainer,
@@ -19,6 +20,28 @@ import {
 } from '../styles/dashboard';
 
 import Drawer from '../components/Drawer';
+import SelectButton from '../components/SelectButton';
+
+const pets = [
+  {
+    value: 'cachorro',
+    label: (
+      <>
+        <SelectDog source={require('../images/select-dog.svg')} />
+        &nbsp; Cachorro
+      </>
+    ),
+  },
+  {
+    value: 'gato',
+    label: (
+      <>
+        <SelectCat source={require('../images/select-cat.svg')} />
+        &nbsp; Gato
+      </>
+    ),
+  },
+];
 
 export default class Dashboard extends Component {
   constructor(props) {
@@ -74,13 +97,7 @@ export default class Dashboard extends Component {
 
         <Content>
           <h2>Rações para</h2>
-          <select>
-            <option defaultValue>Escolha o animal</option>
-            <option value="dog">
-              <SelectDog src={require('../images/select-dog.svg')} /> Cachorro
-            </option>
-            <option value="cat"> Gato</option>
-          </select>
+          <SelectButton options={pets} placeholder="Escolha o animal" />
 
           <CardProduct>
             <ProductImage source={require('../images/racao.svg')} alt="Ração" />
