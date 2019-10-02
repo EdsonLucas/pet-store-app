@@ -18,6 +18,8 @@ export const Nav = styled.div`
   padding: 0 1rem;
 `;
 
+export const CartButton = styled(TouchableOpacity)``;
+
 export const Cart = styled(Image)`
   width: 34px;
   height: 30px;
@@ -101,7 +103,7 @@ export const CardProduct = styled.div`
   display: flex;
   flex-direction: row;
   padding: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   border-radius: 10px;
   box-shadow: 3px 3px 8px 1px #d4d4d4;
 `;

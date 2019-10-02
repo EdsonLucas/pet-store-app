@@ -5,7 +5,7 @@ import Routes from './routes';
 import GlobalStyle from './styles/global';
 
 const App = () => (
-  <SafeAreaView>
+  <SafeAreaView style={{ height: '100%' }}>
     <StatusBar backgroundColor="#FFB901" barStyle="ligh-content" />
     <Routes />
     <GlobalStyle />

@@ -4,6 +4,7 @@ import {
   Container,
   Header,
   Nav,
+  CartButton,
   Cart,
   ToggleButton,
   ContainerLogo,
@@ -46,6 +47,7 @@ const pets = [
 export default class Dashboard extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       DrawerOpen: false,
     };
@@ -59,6 +61,14 @@ export default class Dashboard extends Component {
 
   backdropClickHandler = () => {
     this.setState({ DrawerOpen: false });
+  };
+
+  cart = () => {
+    window.location.href = '/cart';
+  };
+
+  product = () => {
+    window.location.href = '/product';
   };
 
   render() {
@@ -75,10 +85,12 @@ export default class Dashboard extends Component {
             <ContainerLogo>
               <Logo source={require('../images/logo.svg')} alt="Pet Store" />
             </ContainerLogo>
-            <Cart
-              source={require('../images/shopping-cart.svg')}
-              alt="Carrinho de Compras"
-            />
+            <CartButton onClick={() => this.cart()}>
+              <Cart
+                source={require('../images/shopping-cart.svg')}
+                alt="Carrinho de Compras"
+              />
+            </CartButton>
           </Nav>
 
           <Drawer
@@ -103,38 +115,8 @@ export default class Dashboard extends Component {
             <ProductImage source={require('../images/racao.svg')} alt="Ração" />
             <RightContainer>
               <h3>Ração para Cães Adulto Carne e Vegetais Pedigree</h3>
-              <ProductButton>
-                <span>R$ 15,90</span>
-              </ProductButton>
-            </RightContainer>
-          </CardProduct>
-
-          <CardProduct>
-            <ProductImage source={require('../images/racao.svg')} alt="Ração" />
-            <RightContainer>
-              <h3>Ração para Cães Adulto Carne e Vegetais Pedigree</h3>
-              <ProductButton>
-                <span>R$ 15,90</span>
-              </ProductButton>
-            </RightContainer>
-          </CardProduct>
-
-          <CardProduct>
-            <ProductImage source={require('../images/racao.svg')} alt="Ração" />
-            <RightContainer>
-              <h3>Ração para Cães Adulto Carne e Vegetais Pedigree</h3>
-              <ProductButton>
-                <span>R$ 15,90</span>
-              </ProductButton>
-            </RightContainer>
-          </CardProduct>
-
-          <CardProduct>
-            <ProductImage source={require('../images/racao.svg')} alt="Ração" />
-            <RightContainer>
-              <h3>Ração para Cães Adulto Carne e Vegetais Pedigree</h3>
-              <ProductButton>
-                <span>R$ 15,90</span>
+              <ProductButton onClick={() => this.product()}>
+                <span>R$ 15.90</span>
               </ProductButton>
             </RightContainer>
           </CardProduct>

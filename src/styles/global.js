@@ -10,10 +10,15 @@ export default createGlobalStyle`
   }
 
   html, body, #react-root {
-    min-height: 100%;
+    height: 100%;
   }
 
-  body {
+  #react-root {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body, button {
     font-family: 'Nunito', 'Roboto', sans-serif;
     background: #ffffff;
     -webkit-font-smoothing: antialiased !important;
