@@ -7,6 +7,13 @@ import {
   RightContainer,
   LoginButton,
   Content,
+  ContainerImage,
+  Home,
+  Signature,
+  Address,
+  Requests,
+  Cart,
+  PetStore,
 } from '../styles/drawer';
 
 import defaultprofile from '../images/default-profile.svg';
@@ -39,28 +46,54 @@ const SideDrawer = props => {
         <Content>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <ContainerImage>
+                <Home source={require('../images/home.svg')} alt="Home" />
+              </ContainerImage>
+              <button onClick={backdropClickHandler}>Home</button>
             </li>
             <li>
-              <a href="/">Assinatura</a>
+              <ContainerImage>
+                <Signature
+                  source={require('../images/signature.svg')}
+                  alt="Assinatura"
+                />
+              </ContainerImage>
+              <a href="/signature">Assinatura</a>
             </li>
-
             <hr />
-
             <li>
-              <a href="/">Endereços</a>
+              <ContainerImage>
+                <Address
+                  source={require('../images/map.svg')}
+                  alt="Meus Endereços"
+                />
+              </ContainerImage>
+              <a href="/address">Endereços</a>
             </li>
             <li>
-              <a href="/">Meus Pedidos</a>
+              <ContainerImage>
+                <Requests
+                  source={require('../images/truck.svg')}
+                  alt="Meus Pedidos"
+                />
+              </ContainerImage>
+              <a href="/shopping-history">Meus Pedidos</a>
             </li>
             <li>
-              <a href="/">Carrinho</a>
+              <ContainerImage>
+                <Cart source={require('../images/cart-2.svg')} alt="Carrinho" />
+              </ContainerImage>
+              <a href="/cart">Carrinho</a>
             </li>
-
             <hr />
-
             <li>
-              <a href="/">Sobre a Pet Store</a>
+              <ContainerImage>
+                <PetStore
+                  source={require('../images/logo-2.svg')}
+                  alt="Pet Store"
+                />
+              </ContainerImage>
+              <a href="/about">Sobre a Pet Store</a>
             </li>
           </ul>
         </Content>

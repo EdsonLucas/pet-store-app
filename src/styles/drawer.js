@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { TouchableOpacity } from 'react-native-web';
+
+import { Image, TouchableOpacity } from 'react-native-web';
 
 export const Nav = styled.nav`
   height: 100%;
@@ -67,19 +68,68 @@ export const Content = styled.div`
 
   li {
     margin: 0.9rem 0;
+    display: flex;
+    flex-direction: row;
   }
 
-  a {
+  a,
+  button {
     font-size: 18px;
     font-weight: 700;
     color: #707070;
     text-decoration: none;
     font-size: 1.2rem;
+    margin-left: 10px;
+  }
+
+  button {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    outline: none;
   }
 
   hr {
     margin: 1rem 0;
   }
+`;
+
+export const ContainerImage = styled.div`
+  width: 18%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Home = styled(Image)`
+  width: 22px;
+  height: 22px;
+`;
+
+export const Signature = styled(Image)`
+  width: 23px;
+  height: 25px;
+`;
+
+export const Address = styled(Image)`
+  width: 17px;
+  height: 25px;
+`;
+
+export const Requests = styled(Image)`
+  width: 30px;
+  height: 20px;
+`;
+
+export const Cart = styled(Image)`
+  width: 23px;
+  height: 20px;
+`;
+
+export const PetStore = styled(Image)`
+  width: 30px;
+  height: 28px;
 `;
 
 export const BackDrop = styled.div`
