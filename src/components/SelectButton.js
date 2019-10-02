@@ -1,4 +1,4 @@
-import React, { type ElementConfig } from 'react';
+import React from 'react';
 
 import Select, { components } from 'react-select';
 
@@ -9,7 +9,6 @@ const customStyle = {
     padding: 15,
     fontSize: 18,
     fontWeight: 700,
-    marginBottom: 20,
     borderRadius: 10,
   }),
 
@@ -42,29 +41,29 @@ const customStyle = {
   }),
 };
 
-const DropdownIndicator = (
-  props: ElementConfig<typeof components.DropdownIndicator>
-) => {
+const DropdownIndicator = props => {
   return (
     <components.DropdownIndicator {...props}>
       <img
         src={require('../images/arrow-down.svg')}
         width="16px"
         height="17px"
-        alt="Escolha o animal"
+        alt="Escolha"
       />
     </components.DropdownIndicator>
   );
 };
 
 const SelectButton = props => {
+  const { placeholder, options } = props;
+
   return (
     <Select
       styles={customStyle}
       components={{ DropdownIndicator }}
       isSearchable={false}
-      placeholder={props.placeholder}
-      options={props.options}
+      placeholder={placeholder}
+      options={options}
     />
   );
 };
